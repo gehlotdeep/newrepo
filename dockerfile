@@ -50,3 +50,12 @@ WORKDIR  →  To See working director for a Container
 CMD  → Execute Command but during
 
 --------------------------------------------------
+
+--Dockerfile Example
+
+FROM reactionmechanismgenerator/rmg
+WORKDIR /usr/share/nginx/html
+RUN echo "react install successfully" > /usr/share/nginx/html/nginx.html
+ENV myname deepak_gehlot
+COPY  nginxfile /usr/share/nginx/html
+ADD index.tar.gz /usr/share/nginx/html
