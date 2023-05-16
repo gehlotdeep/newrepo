@@ -83,4 +83,6 @@ now ls --we will se a volume dir !!!!
 Now, share volume with another container...
 
 ---;----docker run -it -name (new-container-name) --priviliged=true --volumes-from (old-container-name) /bin/bash
+_________________________________________________________________________________________________________________
+
 
