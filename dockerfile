@@ -59,3 +59,28 @@ RUN echo "react install successfully" > /usr/share/nginx/html/nginx.html
 ENV myname deepak_gehlot
 COPY  nginxfile /usr/share/nginx/html
 ADD index.tar.gz /usr/share/nginx/html
+
+--------------------------------------------------
+
+1 -> docker volume from docker file
+
+-----;----vi Dcokerfile
+
+              FROM ubuntu
+              VOLUME ["/volume"]
+:wq
+
+2 -> create a docker image
+
+------;-----docker build -t (image-name) .
+
+3 -> now create a container from this image & run
+
+----;---- docker run -it --name (container-name) (image-name-maked) /bin/bash
+
+now ls --we will se a volume dir !!!!
+
+Now, share volume with another container...
+
+---;----docker run -it -name (new-container-name) --priviliged=true --volumes-from (old-container-name) /bin/bash
+
