@@ -85,4 +85,16 @@ Now, share volume with another container...
 ---;----docker run -it -name (new-container-name) --priviliged=true --volumes-from (old-container-name) /bin/bash
 _________________________________________________________________________________________________________________
 
+ * Now, try to Create Volume by using Command
 
+---;---docker run -it -v /volume 2 --name ubuntu (new-container-name) -v /volume2 ubuntu /bun/bash
+
+Do ls -> cd /volume2
+
+
+Now Create One file container3 file and exit 
+
+
+Now Create One more container,and share Volume 2 
+
+---;--- docker run -it --name contaner4 --privileged=true --volumes-from container3 ubuntu /bin/bash 
