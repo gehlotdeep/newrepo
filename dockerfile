@@ -85,4 +85,36 @@ Now, share volume with another container...
 ---;----docker run -it -name (new-container-name) --priviliged=true --volumes-from (old-container-name) /bin/bash
 _________________________________________________________________________________________________________________
 
+how to push docker image in dockerhub
+
+COMMANDS 
+1. Sudo Su 
+2. yum update y 
+3. yum install docker -y 
+4. Service docker start 
+5. docker run -it ubuntu /bin/bash 
+
+Now Create Some files inside Container 
+
+Now Create image of this Container.
+
+
+docker Commit Container1(name) image1(name) 
+
+Now Create account in hub.docker.com 
+
+-----NOW GIVE TO TAG TO YOUR IMAGE------
+
+1. docker tag images1 dockerid/newimage <- what name we want to save in our docker hub
+
+2. docker push dockerid/newimage
+
+NOW WE CAN SEE THIS IMAGE IM DOCKER HUB
+
+NOW CREATE AN EC@ INSTANCE IN ANOTHER REGION AND PULL IMAGE FROM HUB
+
+3. docker pull dockerid/newimage
+
+4. docker run -it --name mycon dockerid/newimage /bin/bash
+
 
