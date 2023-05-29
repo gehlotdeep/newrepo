@@ -118,3 +118,15 @@ NOW CREATE AN EC@ INSTANCE IN ANOTHER REGION AND PULL IMAGE FROM HUB
 4. docker run -it --name mycon dockerid/newimage /bin/bash
 
 
+STOP ALL RUNNING CONTAINERS COMMANDS.
+
+-------;----docker stop $(docker ps -a -q)
+
+DELETE ALL STOPPED CONTAINERS 
+
+------;-----docker rm $(docker ps -a -q)
+
+DELETE ALL IMAGES 
+
+-------;------docker rmi -f $(docker images -q)
+
