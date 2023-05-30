@@ -1,0 +1,38 @@
+MAVEN JOB, SCHEDULE TASK, POLL SCM
+
+Go to google chrome -> localhost:8080 -> login 
+
+Go to manage jenkins on left of jenkins dashboard - > manage plugins -> Available select maven integration & green balls -> install without restact
+
+Go to new item -> maven project
+
+now go to manage jenkins -> Global tool configuration 
+
+go to add JDK
+
+"uncheck, this install automatically option 
+
+NAME -> JAVA
+
+JAVA_HOME -> c:\programfiles\java\jdk
+
+Now go to maven
+
+Name - manven
+
+MAVEN_HOME -> c:\devtools\apache-maven 
+
+MAVEN PROJECT (BY MAVEN)
+
+go to  https://github.com/gehlotdeep/newcentralrepo.git 
+
+-> click on newcentralrepo.git repo
+-> "fork" to copy this repo
+-> sign-in into your github account
+-> click on newcentralrepo.git repo
+-> clone
+-> go to C drive
+-> git clone <url of newcentralrepo.git repo>
+-> cd newcentralrepo.git
+-> c:\newcentralrepo.git > mvn clean package
+
