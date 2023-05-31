@@ -1,0 +1,20 @@
+  279  mkdir cli
+  280  cd cli/
+  281  wget http://13.228.208.191:8080/jnlpJars/jenkins-cli.jar
+  282  java -jar jenkins-cli.jar -s http://13.228.208.191:8080/ who-am-i
+  283  ll
+  284  java -jar jenkins-cli.jar -s http://13.228.208.191:8080/ who-am-i
+  285  java -jar jenkins-cli.jar -s http://13.228.208.191:8080/ install-plugin pipeline-utility-steps
+
+----;----here we will create token from jenkins dashboard
+and will same in any file like below like vi creds
+  286  vi creds
+press i then, put -auth user:token id i.e - > deepakgehlot:<token id> then press :wq 
+
+  287  ls
+  288  java -jar jenkins-cli.jar -s http://13.228.208.191:8080/ -auth @creds install-plugin pipeline-utility-steps
+  289  chmod 770 creds 
+  290  java -jar jenkins-cli.jar -s http://13.228.208.191:8080/ -auth @creds install-plugin pipeline-utility-steps
+  291  cat creds 
+  292  java -jar jenkins-cli.jar -s http://13.228.208.191:8080/ help
+  
