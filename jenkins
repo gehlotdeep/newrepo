@@ -2,7 +2,7 @@ MAVEN JOB, SCHEDULE TASK, POLL SCM
 
 Go to google chrome -> localhost:8080 -> login 
 
-Go to manage jenkins on left of jenkins dashboard - > manage plugins -> Available select maven integration & green balls -> install without restact
+Go to manage jenkins on left of jenkins dashboard - > manage plugins -> Available select maven integration & green balls -> install without restart
 
 Go to new item -> maven project
 
