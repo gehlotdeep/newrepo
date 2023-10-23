@@ -1,0 +1,5 @@
+install node.js ---- by browser
+node -v
+npm install angular/cli
+ctrl  c
+clear

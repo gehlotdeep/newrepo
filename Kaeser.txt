@@ -1,0 +1,17 @@
+Kaeser Task SDL Tridion 
+
+
+Dynatrace------>Alert tracking.
+
+
+Tools we use in kaeser project :
+
+
+RWS support Gateway : Monitoring tools for alert via alert.
+Slack  : communication Plateform work on different channel.
+Dynatrace : The application monitoring tool that helps the users with proper performance monitoring
+
+We check
+Dynatrace--->container---->
+750330054704.dkr.ecr.eu-west-1.amazonaws.com/kaeser-webapp-release:R1.0.10
+

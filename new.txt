@@ -1,0 +1,35 @@
+AWS CLI
+To find the instance IDs of the DB instances in your account, call the describe-db-instances command:
+
+
+aws rds describe-db-instances --query 'DBInstances[*].[DBInstanceIdentifier]' --output text
+
+To delete a DB instance by using the AWS CLI, call the delete-db-instance command with the following options:
+
+--db-instance-identifier
+
+--final-db-snapshot-identifier or --skip-final-snapshot
+
+Example With a final snapshot and no retained automated backups
+For Linux, macOS, or Unix:
+
+
+aws rds delete-db-instance \
+    --db-instance-identifier mydbinstance \
+    --final-db-snapshot-identifier mydbinstancefinalsnapshot \
+    --delete-automated-backups
+
+For Windows:
+
+
+aws rds delete-db-instance ^
+    --db-instance-identifier mydbinstance ^
+    --final-db-snapshot-identifier mydbinstancefinalsnapshot ^
+    --delete-automated-backups
+
+RDS API
+To delete a DB instance by using the Amazon RDS API, call the DeleteDBInstance operation with the following parameters:
+
+DBInstanceIdentifier
+
+FinalDBSnapshotIdentifier or SkipFinalSnapshot

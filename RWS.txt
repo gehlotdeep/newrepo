@@ -1,0 +1,93 @@
+mindspark mosaic group link : https://mindspark.okta.com/
+user name ;  Lalit.Prasad
+password : @MonOpsPrimary@1
+
+ 
+
+confluence link : https://wddevops.atlassian.net/
+mail id : noc@webdunia.net
+pass : Diaspark12345
+
+ 
+
+I-Pace (HRMS) - https://ipace.w.moravia.com/Home
+
+ 
+
+Timesheet - https://ipace.w.moravia.com/Home Pathway >> PMS option in the Menu
+
+ 
+
+Updates/Holidays for India Location- https://moraviait.sharepoint.com/sites/India
+
+ 
+
+For Training and Development - https://gate.moravia.com/apps/hris/es/SitePages/Learning/LearningMaterialDetails.aspx?ucHideRibbon=true&lmID=867
+
+ 
+
+Mylx Training - https://mylx.percipio.com
+
+ 
+
+user id - dgehlot@moravia.com
+password - 9826depG@12345#
+git email - deepakgehlot619dx@gmail.com
+git pass -  mygit@123#
+AWS email - deepakgehlot619dx@gmail.com
+AWS pass - Deepak@geh123$
+chef user - deepakgehlot
+chef pass -mychef@123#
+jyoti mpin - 965920
+
+ 
+
+RWS signature link : https://gate.moravia.com/ou/gbs/SolutionsInternal/SignaturesAndCards/index_rws2021.html
+
+ 
+
+Employee ID - 262641
+
+ git url - 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
+
+#################################----------ANSIBLE CONDITIONA 
+
+--- # condition
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: Install apache server for debian family
+      command: apt-get install apache2
+      when: ansible_os_family == "Debian"
+    - name: Install apache2 for RedHat femily
+      command: yum -y install httpd
+      when: ansible_os_family == "RedHat"
+
+###############################----------USER.YML
+--- # user add
+- hosts: demo 
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: add list users in my node
+      user: name='{{item}}' state=present passwd=deepak
+      with_items:
+            - deepak
+            - ankit
+            - raju
+            - khans
+
+#############################------------
+
+FROM ubuntu:latest
+VOLUME ["/volume"i]
+RUN  apt-get update && \ 
+    apt-get install -y apache2 && \
+    apt-get clean
+EXPOSE 80
+CMD ["apache2ctl", "-D", "FOREGROUND"]
+WORKDIR /var/www/html
+COPY file.xml /home/ec2-user

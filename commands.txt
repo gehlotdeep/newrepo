@@ -1,0 +1,9 @@
+pem file to ppk file
+
+--> sudo apt-get install putty -y 
+--> puttygen keypair.pem -o mykey.ppk -o private
+
+--> IN HCL Language key_name = "my-keypair"
+--> aws ec2 create-key-pair --key-name my-keypair --query 'KeyMaterial' --output text > my-keypair.pem
+
+

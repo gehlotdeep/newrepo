@@ -1,0 +1,41 @@
+Primary Tasks  IAC (InterActiveCrop)
+
+
+
+IAC----->Primary----->Alerts----->(Slack/Mail)----->Via Logic Monitor and User request on slack channels.
+
+
+
+Tools we use in Primary IAC are :
+
+
+
+Logic monitor : Network Monitoring Tools for alerts via Mail/Slack channels.
+Slack : Communication Platform work on different channels.
+JIRA : Project management, Bugs tracking, Tickets Tracking tool use to create PIT (Production Incident Tracking) and Devops Tickets  
+
+
+
+There are 6 Channels On which we work in primary :
+
+
+
+mosic_support_platform : User request (PIT tickets) tag @de-support-team.
+devops_core : Here we update jira tickets, alert we received from Logic monitor via Mail & monitorigops channel on slack.
+monitoringops : A channel where we receive same alerts that we receive on mail via logic monitor.
+devops_mosic :  Here update FYI mails related VPN & Billings.
+diaspark_assist : Use for Communication though IACapps Manager Team.
+diaspark_noc-archived : Here we update person chat between IAC Manager team.
+
+
+
+Mails
+mosaic_platform_support --------PIT ticket (JIRA) ------- @de-support-term
+BGP peering ------ Wait 30 Min ------ Ticket ------ team-devops-core  
+Billing Errors ------ FYI ----- team-devops-mosaic
+
+
+
+Reports
+Client EOS Report --------- After 10:45 --------- To: Mointoringoops CC: Angel
+Internal EOS  -------- After 10:45 -------- TO :DevOps India   

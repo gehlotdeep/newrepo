@@ -1,0 +1,17 @@
+create a vmware on aws cloud
+
+--yum update -y
+--sudo amazon-linux-extras install ansible2 -y
+# make a root permission to ansible so we have to some corrections in visudo 
+--visudo 
+--------ansible ALL=(ALL) NOPASSWD=(ALL)
+
+we have to some changes in vi /etc/ansible/ansible.cfg
+
+
+rsync command to send our file to another machine 
+
+yum install rsync -y
+some changes in vi /etc/ssh/sshd_cfg
+# authentication rootpermotlogin yes krna hai aur PasswordAuthentication yes krna hai
+--rsync -avzhe ssh file.txt root@privateip:/path to send

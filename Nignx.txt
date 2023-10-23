@@ -1,0 +1,33 @@
+sudo vi /etc/yum.repos.d/nginx.repo
+.
+.
+.
+.
+.
+[nginx]
+name=nginx repo 
+baseurl=https://nginx.org/packages/centos/8/$basearch/
+gpgcheck=0
+enabled=1
+.
+.
+.
+.
+sudo yum update
+.
+.
+.
+sudo yum install nginx
+
+start and check the status of nginx
+
+		system start/stop/status nginx
+
+another way to verify
+
+		curl -I 127.0.01
+
+to reach ----> 
+		in root user -----> cd /etc/nginx
+ 
+			|_>	cd /usr/share/nginx/html

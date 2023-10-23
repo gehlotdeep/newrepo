@@ -1,0 +1,50 @@
+AWS - VPC peering across two region
+
+1. Go to service  --  Create VPC -- Tag name
+
+Then we need to give ipv4 cidr block for eg 10.0.0.0/16
+
+yes to Create...
+
+2. next step for Create subnet 
+
+Create subnet -- subnet VPC tokyo -- Select VPC -- Avaibility Zone (Choose anyone)
+
+ipv4 cidr block 10.0.0.0/24 -- Create subnet
+
+3. Internet Gateway -- create internet gateway -- Tag name (choose yourself)
+
+this will show ditached -- go to action -- attach to VPC
+
+4. Route table -- Create route Table -- Tag name (choose yourself)
+
+VPC Select (Choose that one who you create "note : do not take default")
+
+Yes to Create -- select it -- go to route -- edit -- add another route --
+
+Then put (0.0.0.0/0 to get the internet access) -- select local -- igw -- save --
+
+go to subnet association -- edit -- tick -- save
+
+After this process we will create launch instance 
+
+		Go to EC2
+
+select network (Choose that one who you create "note : do not take default")
+
+select subnet (already taken but select if in case that not choosen)
+
+auto assign public IP (enable) 
+
+security name (Tokyo security group) -- description (Tokyo to mumbai VPC peering)
+
+RDP -- Anywhere -- add rule
+
+all ICMP ipv4 -- Anywhere
+
+new key pair -- tag name -- Toky key pair and Download it make sure we can not download again
+
+NOW we will create and make new region and follow same above these steps
+
+
+
